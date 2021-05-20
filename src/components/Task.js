@@ -11,7 +11,7 @@ export default function Task({ task: { id, title, state }, onArchiveTask, onPinT
           disabled={true}
           name="checked"
         />
-        <span className="checkbox-custom" onCLick={() => onArchiveTask(id)}/>
+        <span className="checkbox-custom" onClick={() => onArchiveTask(id)}/>
       </label>
       <div className="title">
         <input type="text" value={title} readOnly={true} placeholder="Input title"/>
@@ -43,4 +43,4 @@ Task.propTypes = {
   onArchiveTask: PropTypes.func,
   /** Event to change the task to pinned */
   onPinTask: PropTypes.func,
-}
+};
